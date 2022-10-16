@@ -1,10 +1,9 @@
-//basic config
+// //basic config
 const express = require('express');
-const cors = require('cors')
 const app = express();
+const cors = require('cors')
 require('dotenv').config();
-app.set('port', process.env.PORT || 8000)
-
+app.set('port', 8000)
 //middleware
 app.use(cors());
 app.use(express.json());
@@ -15,7 +14,6 @@ app.use(express.urlencoded({ extended: true }));
 app.get('/', (req, res) => {
     res.redirect('/home')
 });
-
 //controllers
 const usersControllers = require('./controllers/usersController');
 app.use('/users', usersControllers);
