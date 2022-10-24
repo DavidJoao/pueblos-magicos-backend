@@ -1,13 +1,11 @@
-GET http://localhost:8000
+GET http://localhost:8000/pueblos
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiRGF2aWQiLCJpYXQiOjE2NjY1NzIwNTF9.63XcgrqKg5SXSzCor60sejogxeGwWY0a4RjdR9gfz3U
 
 ###
 
-POST http://localhost:8000/pueblos
-
-### 
 POST http://localhost:8000/login
 Content-Type: application/json
 
 {
-    "username": "Jeannette"
+    "username": "David"
 }
