@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "devStart":"nodemon index.js",
+    "devStart": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,6 +17,8 @@
   "bugs": {
     "url": "https://github.com/DavidJoao/pueblos-magicos-backend/issues"
   },
-  "homepage": "https://github.com/DavidJoao/pueblos-magicos-backend#readme"
+  "homepage": "https://github.com/DavidJoao/pueblos-magicos-backend#readme",
+  "dependencies": {
+    "dotenv": "^16.0.3"
+  }
 }
- 

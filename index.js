@@ -4,6 +4,7 @@ const app = express();
 const cors = require('cors')
 require('dotenv').config();
 app.set('port', 8000)
+
 //middleware
 app.use(cors());
 app.use(express.json());
@@ -12,7 +13,7 @@ app.use(express.urlencoded({ extended: true }));
 //routes // redirect
 
 app.get('/', (req, res) => {
-    res.redirect('/home')
+    res.redirect('/pueblos')
 });
 //controllers
 const usersControllers = require('./controllers/usersController');
