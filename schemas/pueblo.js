@@ -3,14 +3,12 @@ const reviewSchema = require('./review')
 
 const puebloSchema = new mongoose.Schema({
     name: String,
+    description: String,
     location: {
-        town: String,
         state: String,
         country: String
     },
-    images: [String],
-    reviews: [reviewSchema],
-    attractions: [String]
+    images: [String]
 })
 
 const Pueblo = mongoose.model('Pueblo', puebloSchema)
