@@ -11,6 +11,15 @@ router.get('/', (req, res, next) => {
     console.log('GET all pueblos')
 })
 
+//get pueblo by ID
+router.get('/:_id', async (req, res, next) => {
+   try{
+    const pueblo = await Pueblo.findById(req.params._id)
+    res.json(pueblo)
+   } catch(err) {
+    next(err)
+   }
+})
 
 //post pueblo
 router.post('/', (req, res, next) => {
@@ -21,8 +30,8 @@ router.post('/', (req, res, next) => {
 })
 
 //delete pueblo
-router.delete('/:id', (req, res, next) => {
-    Pueblo.findByIdAndDelete(req.params.id)
+router.delete('/:_id', (req, res, next) => {
+    Pueblo.findByIdAndDelete(req.params._id)
     .then((pueblo) => res.json(pueblo))
     .catch(next)
     console.log('DELETE Pueblo')
